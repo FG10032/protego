@@ -1,0 +1,34 @@
+policies:
+  prod:
+    require_dynamic_allocation_for_batch: true
+    max_executor_cores: 5
+    max_executor_memory_gb: 24
+    allowed_architectures:
+      - x86_64
+      - arm64
+    preferred_architecture: arm64
+    fail_on_unknown_instance_type: true
+    warn_if_estimated_utilization_below: 0.35
+    target_utilization: 0.65
+
+pricing:
+  m6i.2xlarge:
+    hourly: 0.384
+    vcpu: 8
+    memory_gb: 32
+    architecture: x86_64
+  m6i.4xlarge:
+    hourly: 0.768
+    vcpu: 16
+    memory_gb: 64
+    architecture: x86_64
+  m7g.2xlarge:
+    hourly: 0.326
+    vcpu: 8
+    memory_gb: 32
+    architecture: arm64
+  m7g.4xlarge:
+    hourly: 0.653
+    vcpu: 16
+    memory_gb: 64
+    architecture: arm64

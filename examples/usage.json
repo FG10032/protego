@@ -1,0 +1,14 @@
+{
+  "clickstream-daily-rollup": {
+    "avg_cpu_utilization": 0.28,
+    "p95_cpu_utilization": 0.46,
+    "avg_memory_utilization": 0.42,
+    "runtime_hours_per_month": 150
+  },
+  "ads-events-stream": {
+    "avg_cpu_utilization": 0.62,
+    "p95_cpu_utilization": 0.78,
+    "avg_memory_utilization": 0.55,
+    "runtime_hours_per_month": 730
+  }
+}

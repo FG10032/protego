@@ -1,0 +1,52 @@
+{
+  "results": [
+    {
+      "env": "prod",
+      "estimated_monthly_cost": 2304.0,
+      "messages": [
+        {
+          "cause": "Batch job has dynamic allocation disabled but policy requires it.",
+          "code": "DYNAMIC_ALLOCATION_REQUIRED",
+          "level": "error",
+          "suggestion": "Set spark.dynamic_allocation to true for batch job."
+        },
+        {
+          "cause": "Job runs on 'x86_64' but the preferred architecture is 'arm64'. Compatible option 'm7g.4xlarge' is available.",
+          "code": "NON_PREFERRED_ARCHITECTURE",
+          "level": "warn",
+          "suggestion": "Suggest migrating to m7g.4xlarge (arm64). Please validate workload compatibility and rebuild historical utilization before committing."
+        },
+        {
+          "cause": "Average CPU utilization 28% is below the 35% threshold; the job may be over-provisioned.",
+          "code": "LOW_UTILIZATION",
+          "level": "warn",
+          "suggestion": "Review the rightsizing recommendation to reduce workers or instance size."
+        },
+        {
+          "cause": "Job appears over-provisioned. Reducing workers 20 -> 15 keeps projected p95 CPU 61% and memory 56% at or under the 65% target. Estimated savings $576.00/month.",
+          "code": "RIGHTSIZE_AVAILABLE",
+          "level": "warn",
+          "suggestion": "Reduce cluster workers from 20 to 15."
+        }
+      ],
+      "name": "clickstream-daily-rollup",
+      "potential_monthly_savings": 576.0,
+      "status": "fail"
+    },
+    {
+      "env": "prod",
+      "estimated_monthly_cost": 2242.56,
+      "messages": [
+        {
+          "cause": "Job runs on 'x86_64' but the preferred architecture is 'arm64'. Compatible option 'm7g.2xlarge' is available.",
+          "code": "NON_PREFERRED_ARCHITECTURE",
+          "level": "warn",
+          "suggestion": "Suggest migrating to m7g.2xlarge (arm64). Please validate workload compatibility and rebuild historical utilization before committing."
+        }
+      ],
+      "name": "ads-events-stream",
+      "potential_monthly_savings": null,
+      "status": "warn"
+    }
+  ]
+}
